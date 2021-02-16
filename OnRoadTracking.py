@@ -48,27 +48,4 @@ while True:
         break
 # Release the video object which is capture
 video.release()
-"""
-# create Opencv image
-img = cv2.imread(car_img)
 
-#Convert Image to B&W (needed for haar cascade)
-BndW = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-
-#Create Car classifier
-car_tracker = cv2.CascadeClassifier(classifier_file)
-
-#Detect car
-cars = car_tracker.detectMultiScale(BndW)
-# print(cars)
-
-# Draw rectangle around cars
-for (x, y, w, h) in cars:
-    # (0,0,0) change for color / ,4) change thickness
-    cv2.rectangle(img,(x,y),(x+w, y+h), (randrange(255),randrange(255),randrange(255)),4)
-"""
-
-
-#train the algorithms to detect cars
-
-print("Me_Abm")
