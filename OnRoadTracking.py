@@ -5,9 +5,11 @@ from random import randrange
 car_img = 'car2.jpg'
 # video = cv2.VideoCapture('tesla accident.mp4')
 video = cv2.VideoCapture('pedestrian.mp4')
+
 #Our pre trained classifier data
 car_classifier_file = 'cars.xml'
 pedestrian_classifier_file = 'haarcascade_fullbody.xml'
+
 #Create Car classifier
 car_tracker = cv2.CascadeClassifier(car_classifier_file)
 #Create pedestrian classifier
@@ -32,7 +34,7 @@ while True:
         # (0,0,0) change for color / ,4) change thickness
         cv2.rectangle(frame,(x+1,y+2),(x+w, y+h), (255,0,255),4)
         cv2.rectangle(frame,(x,y),(x+w, y+h), (255,0,0),4)
-    # Draw rectangle around cars
+    # Draw rectangle around pedestrians
     for (x, y, w, h) in pedestrians:
         # (0,0,0) change for color / ,4) change thickness
         cv2.rectangle(frame,(x,y),(x+w, y+h), (0,255,255),4)
